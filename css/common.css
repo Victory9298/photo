@@ -1,0 +1,29 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #E5E5E5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,260 @@
+@import '_mixin.scss';
+
+
+.nav__link {
+  @include desktop {
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease;
+  }
+}
+
+.nav__link:hover {
+  @include desktop {
+    background-color: #202020;
+    color: rgba(255, 110, 48, 1);
+  }
+}
+
+.nav__link:focus {
+  @include desktop {
+    background: #BC572B;
+    color: #fff;
+  }
+}
+
+.nav__link:active {
+  @include desktop {
+    background: #202020;
+    color: rgba(206, 67, 7, 1);
+  }
+}
+
+.btn-transparent {
+  @include desktop {
+    -webkit-transition-property: background-color, border;
+    -o-transition-property: background-color, border;
+    transition-property: background-color, border;
+    -webkit-transition-duration: .5s;
+        -o-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+}
+
+.btn-transparent {
+  @include desktop {
+    -webkit-transition-property: background-color, border;
+    -o-transition-property: background-color, border;
+    transition-property: background-color, border;
+    -webkit-transition-duration: .5s;
+        -o-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+}
+
+.btn-orange:hover {
+  @include desktop {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(188, 87, 43, 1);
+  }
+}
+
+.btn-orange:focus {
+  @include desktop {
+    cursor: pointer;
+    background-color: #FF6E30;
+    border: 3px solid #CE4307;
+  }
+}
+
+.btn-orange:active {
+  @include desktop {
+    cursor: pointer;
+    border: none;
+    background-color: #CE4307;
+  }
+}
+
+.btn-transparent:hover {
+  @include desktop {
+    cursor: pointer;
+    border: none;
+    background-color: #FF6E30;
+  }
+}
+
+.btn-transparent:focus {
+  @include desktop {
+    cursor: pointer;
+    background-color: #BC572B;
+    border: 3px solid #FF6E30;
+  }
+}
+
+.btn-transparent:active {
+  @include desktop {
+    cursor: pointer;
+    border: none;
+    background-color: #CE4307;
+  }
+}
+
+.icon-list__svg {
+  @include desktop {
+        -webkit-transition-property: fill;
+        -o-transition-property: fill;
+        transition-property: fill;
+        -webkit-transition-duration: .5s;
+            -o-transition-duration: .5s;
+                transition-duration: .5s;
+        -webkit-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+                transition-timing-function: ease-in-out;
+      }
+}
+
+.icon-list__item:hover {
+  @include desktop {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+
+.icon-list__item:focus {
+  @include desktop {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+
+.icon-list__item:active {
+  @include desktop {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+
+.icon-list__svg:hover path{
+  @include desktop {
+    fill: #FF6E30;
+  }
+}
+
+.icon-list__svg:active path {
+  @include desktop {
+    stroke: #CE4307;
+  }
+}
+
+.studio-mailing__input {
+  @include desktop {
+    -webkit-transition-property: color, border;
+    -o-transition-property: color, border;
+    transition-property: color, border;
+    -webkit-transition-duration: .5s;
+        -o-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+}
+
+.studio-mailing__input:hover {
+  @include desktop {
+    border: none;
+    color: rgba(255, 110, 48, 1);
+  }
+}
+
+.studio-mailing__input:focus {
+  @include desktop {
+    border: 1px solid #FF6E30;
+    color: #fff;
+  }
+}
+
+.studio-mailing__input:active {
+  @include desktop {
+    border: none;
+    color: #fff;
+  }
+}
+
+.contacts-input {
+  @include desktop {
+    -webkit-transition-property: color, border;
+    -o-transition-property: color, border;
+    transition-property: color, border;
+    -webkit-transition-duration: .5s;
+        -o-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+}
+
+.contacts-input:hover {
+  @include desktop {
+    border: 1px solid rgba(153, 153, 153, 1);
+    color: rgba(255, 110, 48, 1);
+  }
+}
+
+.contacts-input:focus {
+  @include desktop {
+    border:  1px solid #FF6E30;;
+    color: #999999;
+  }
+}
+
+.contacts-input:active {
+  @include desktop {
+    border: 1px solid rgba(153, 153, 153, 1);
+    color: #202020;
+  }
+}
+
+.photo__title {
+  @include desktop {
+    -webkit-transition-property: color, background-color;
+    -o-transition-property: color, background-color;
+    transition-property: color, background-color;
+    -webkit-transition-duration: .5s;
+        -o-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+}
+
+.photo__title:hover {
+  @include desktop {
+    background-color: #FFD4C1;
+    color: rgba(255, 110, 48, 1);
+  }
+}
+
+.photo__title:focus {
+  @include desktop {
+    background-color: #E5E5E5;
+    color: #202020;
+  }
+}
+
+.photo__title:active {
+  @include desktop {
+    background-color: #E5E5E5;
+    color: rgba(206, 67, 7, 1);
+  }
+}
+
+
+
+

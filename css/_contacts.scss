@@ -1,0 +1,399 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+// Contacts
+
+.section-contacts {
+  margin-bottom: 70px;
+  @include small-mobile {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts {
+  background-color: #E5E5E5;
+
+}
+
+.contacts__container {
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+
+  @include small-mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include very-small-mobile {
+    margin-bottom: 35px;
+  }
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr .5fr;
+  grid-gap: 30px;
+  padding-left: 10px;
+
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 4vw;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3vw;
+  }
+
+  @include mid-mobile {
+    padding-top: 10vh;
+  }
+
+  @include small-mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2vw;
+  }
+
+  @include very-small-mobile {
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
+.contacts__right {
+  flex: 1;
+
+  @include tablet {
+    grid-column: 6/9;
+  }
+  @include mobile {
+    grid-column: 1/5;
+    grid-row: 2;
+  }
+
+  @include small-mobile {
+    padding-right: 21px;
+    padding-left: 21px;
+    max-width: 320px;
+  }
+}
+
+.contacts-map{
+  position: relative;
+}
+
+.map {
+  position: relative;
+  // width: 850px;
+  width: 100%;
+  height: 460px;
+
+  @include tablet {
+    // width: 590px;
+    height: 465px;
+  }
+
+  @include mobile {
+    grid-column: 1/6;
+    width: 100%;
+    // width: 714px;
+  }
+
+  @include small-mobile {
+    width: 100%;
+    // height: 472px
+  }
+}
+
+.contacts__left {
+
+  @include tablet {
+    grid-column: 1/6;
+  }
+
+  @include mobile {
+    grid-column: 1/7;
+  }
+
+  // @include small-mobile {
+  //   grid-column: 1/4;
+  // }
+}
+
+.contacts__left-info {
+  background-color: rgba(32, 32, 32, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 52%;
+  height: 100%;
+
+  @include tablet {
+    top: auto;
+    bottom: 0;
+    height: 33%;
+    width: 100%;
+  }
+
+  @include mobile {
+    grid-column: 1/6;
+    // width: 714px;
+    width: 100%;
+  }
+
+  @include small-mobile {
+    width: 100%;
+    height: 33%;
+  }
+}
+
+.contacts__title {
+  font-family: 'TTFirsNeue';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  padding-left: 10px;
+  margin-bottom: 16px;
+
+  @include small-mobile {
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 23px;
+    padding-left: 20px;
+  }
+}
+
+.ymaps-2-1-79-controls__toolbar,
+.ymaps-2-1-79-copyrights-pane,
+.ymaps-2-1-79-controls-pane {
+  display: none;
+}
+
+.info__article {
+  padding-top: 175px;
+  padding-left: 60px;
+  padding-right: 50px;
+
+  @include tablet {
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-right: 25vw;
+  }
+
+  @include mobile {
+    padding-right: 330px;
+    padding-left: 27px;
+  }
+
+  @include mid-mobile {
+    padding-right: 0;
+    padding-left: 27px;
+  }
+
+  @include small-mobile {
+    padding-right: 21px;
+    padding-left: 21px;
+    padding-top: 25px;
+  }
+}
+
+.info__article-x {
+  display: flex;
+  padding-top: 20px;
+  // padding-left: 370px;
+  right: 10px;
+  position: absolute;
+
+  @include tablet {
+    // padding-left: 550px;
+    // right: 10px;
+  }
+
+  @include mobile {
+    padding-top: 25px;
+    padding-left: 670px;
+  }
+
+  @include small-mobile {
+    padding-left: 280px;
+    padding-top: 20px;
+  }
+}
+
+.info__title {
+  font-family: 'TTFirsNeue';
+  font-size: 24px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 5px;
+
+  @include small-mobile {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+}
+
+.info__content {
+  color: #CACACA;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 0;
+  font-style: inherit;
+
+  @include small-mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.info__link {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  text-decoration: none;
+
+  @include tablet {
+    color: #FF6E30;
+  }
+  @include small-mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.info-tel-img{
+  @include tablet {
+    fill: #FF6E30;
+  }
+}
+
+.form__title {
+  margin: 0;
+  font-family: 'TTFirsNeue';
+  font-size: 24px;
+  line-height: 22px;
+  font-weight: 500;
+  color: rgba(32, 32, 32, 1);
+
+  @include tablet {
+    margin-bottom: 5px;
+  }
+
+  @include mobile {
+    margin-bottom: 5px;
+  }
+
+  @include small-mobile {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  @include very-small-mobile {
+    padding-top: 20px;
+  }
+}
+
+.form__content {
+  color: #999999;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  // padding-right: 14vw;
+
+  @include tablet {
+    padding-right: 0;
+  }
+
+  @include small-mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__form .input {
+  width: 100%;
+  background-color: rgba(233, 233, 233, 1);
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 23px;
+  color: rgba(153, 153, 153, 1);
+  border: 1px solid rgba(153, 153, 153, 1);
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 17px;
+
+  @include small-mobile {
+    padding: 12px 23px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.contacts__form .js-validate-error-label {
+  position: relative;
+  top: -65px !important;
+  margin-bottom: -14px;
+  color: rgba(240, 102, 102, 1) !important;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 20px;
+}
+
+.contacts__form .js-validate-error-field {
+  border: 1px solid rgba(240, 102, 102, 1) !important;
+}
+
+label  {
+  margin-bottom: 10px;
+  @include small-mobile {
+    margin-bottom: 30px;
+  }
+}
+
+.studio-mailing__btn {
+  background-color: rgba(255, 110, 48, 1);
+  height: 50px;
+  width: 129px;
+  justify-self: flex-end;
+  @include small-mobile {
+    width: 115px;
+    height: 40px;
+  }
+}
+
+.form__btn {
+  width: 126px;
+}
+
+textarea {
+  @include small-mobile {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+  }
+
+  @include very-small-mobile {
+    margin-bottom: 0;
+    padding-bottom: 32px;
+  }
+}

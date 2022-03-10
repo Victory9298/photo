@@ -1,0 +1,270 @@
+
+  .burger-menu_active .menu {
+    display: none;
+
+    @include small-mobile {
+    right: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    position: fixed;
+    z-index: 20;
+    }
+  }
+
+  .menu.is-active {
+    display: none;
+
+    @include small-mobile {
+      -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    position: fixed;
+    left: 0vw;
+    right: 0;
+    z-index: 20;
+    }
+  }
+
+.burger {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    --burger-width: 20px;
+    --burger-height: 18px;
+    --burger-line-height: 2px;
+    position: relative;
+    border: none;
+    padding: 0;
+    width: var(--burger-width);
+    height: var(--burger-height);
+    color: #FFFFFF;
+    background-color: transparent;
+    cursor: pointer;
+    right: 0px;
+    z-index: 30;
+  }
+}
+
+.burger::before, .burger::after {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+}
+
+.burger::before {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    top: 0;
+  }
+}
+
+.burger::after {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    top: calc(100% - var(--burger-line-height));
+  }
+}
+
+.burger__line {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+
+}
+
+.burger--active::before {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+
+}
+.burger--active::after {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+}
+
+.burger--active .burger__line {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  color: #E1670E;
+  }
+}
+
+.burger:active {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    color: #E1670E;
+  }
+}
+
+.burger:hover {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    color: #FF9900;
+  }
+}
+
+/* Изменяем размеры для линий бургера */
+.burger span {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    width: 100%;
+    right: auto;
+    left: 0px;
+  }
+}
+
+.burger:hover span, .burger:active span  {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    width: calc(100% / 6 * 5);
+    left: auto;
+    right: 0px;
+  }
+}
+
+.burger::after {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    width: 60%;
+    right: auto;
+    left: 0px;
+  }
+}
+
+.burger:hover::after, .burger:active::after {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    width: 60%;
+    left: auto;
+    right: 0px;
+  }
+}
+/**/
+
+.burger--active:active {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    color: #E1670E;
+  }
+}
+
+.burger--active:hover {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    color: #FF9900;
+  }
+}
+
+/* Возвращаем длину линий для крестика*/
+.burger--active span, .burger--active:hover span {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    width: 100%;
+  }
+}
+
+.burger--active::after, .burger--active:hover::after {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    width: 100%;
+  }
+}
+/**/
+
+.burger:focus::after {
+  display: none;
+
+  @include small-mobile {
+    display: block;
+    opacity: 1;
+  }
+}

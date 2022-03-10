@@ -1,0 +1,493 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+// Projects
+
+.projects {
+  padding-top: 50px;
+  margin-bottom: 70px;
+
+  @include tablet {
+    margin-bottom: 65px;
+  }
+
+  @include mobile {
+    padding-top: 30px;
+    margin-bottom: 70px;
+  }
+
+  @include small-mobile {
+    padding-top: 38px;
+    margin-bottom: 55px;
+  }
+
+  @include very-small-mobile {
+    margin-bottom: 50px;
+  }
+}
+
+.projects__container {
+  padding-left: 10px;
+
+  @include tablet {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+
+  @include mobile {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  @include small-mobile {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
+.projects__title {
+  font-family: 'TTFirsNeue';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include small-mobile {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  @include very-small-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.projects__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, .63fr) 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 1.5vw;
+
+  @include tablet {
+    grid-template-rows: 285px 307px 307px;
+    grid-template-columns: repeat(8, .3fr);
+    gap: 2.5vw;
+    margin-top: 0;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(6, .3fr);
+    grid-template-rows: repeat(4, 300px);
+    gap: 30px;
+  }
+
+  @include small-mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr) 1.4fr repeat(2, 1fr) 1.4fr ;
+  }
+
+  @include very-small-mobile {
+    grid-template-rows: repeat(3, 278px) 422px repeat(2, 300px) 422px;
+    gap: 25px;
+  }
+}
+
+.projects__subtitle {
+  padding-top: 185px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 5px;
+
+  @include tablet {
+    padding-top: 205px;
+    margin-bottom: 17px;
+    margin-top: 0;
+  }
+
+  @include small-mobile {
+    padding-top: 190px;
+  }
+
+  @include very-small-mobile {
+    padding-top: 200px;
+  }
+}
+
+.landscape {
+  background-image: url('../img/landscape.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+
+  @include tablet {
+    background-image: url('../img/landscape1024.jpg');
+    order: 1;
+    grid-column: 1/3;
+    background-size: auto auto;
+  }
+
+  @include mobile {
+    background-image: url('../img/landscape768.jpg');
+    background-size: auto auto;
+    grid-column: 1/3;
+  }
+
+  @include small-mobile {
+    grid-column: 1;
+    order: 1;
+    background-image: url('../img/landscape320.jpg');
+  }
+}
+
+.portrait {
+  background-image: url('../img/portrait.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+
+  @include tablet {
+    background-image: url('../img/portrait1024.jpg');
+    order: 2;
+    grid-column: 3/5;
+    background-size: auto auto;
+  }
+
+  @include mobile {
+    background-image: url('../img/portrait768.jpg');
+    background-size: auto auto;
+    grid-column: 3/5;
+  }
+
+  @include small-mobile {
+    grid-column: 1;
+    order: 2;
+    background-image: url('../img/portrait320.jpg');
+  }
+}
+
+.objects {
+  background-image: url('../img/objects.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+
+  @include tablet {
+    background-image: url('../img/objects1024.jpg');
+    order: 3;
+    background-size: 100% 65%;
+    grid-column: 5/9;
+  }
+
+  @include mobile {
+    background-image: url('../img/objects768.jpg');
+    grid-column: 5/7;
+    background-size: auto auto;
+  }
+
+  @include small-mobile {
+    grid-column: 1;
+    order: 3;
+    background-image: url('../img/objects320.jpg');
+  }
+}
+
+.fuji {
+  background-image: url('../img/fuji.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  grid-column: 4/6;
+
+  @include tablet {
+    background-image: url('../img/fuji1024.jpg');
+    order: 4;
+    grid-column: 1/6;
+    background-size: auto;
+    padding-bottom: 35px;
+  }
+
+  @include mobile {
+    background-image: url('../img/fuji768.jpg');
+    grid-column: 1/7;
+    background-size: auto auto;
+  }
+
+  @include small-mobile {
+    grid-column: 1;
+    background-size: 100% auto;
+    order: 4;
+    background-image: url('../img/fuji320.jpg');
+  }
+
+  @include very-small-mobile {
+    background-size: auto;
+  }
+}
+
+.fuji .projects__article,
+.oblivion .projects__article {
+  padding-top: 22px;
+  padding-left: 30px;
+
+  @include tablet {
+    padding-right: 25vw;
+  }
+
+  @include mobile {
+    padding-right: 50vw;
+  }
+
+}
+
+.oblivion .projects__article {
+  @include tablet {
+    padding-top: 27px;
+    margin-bottom: 78px;
+  }
+
+  @include mobile {
+    padding-top: 30px;
+  }
+
+  @include small-mobile {
+    padding-top: 205px;
+    padding-right: 0;
+  }
+}
+
+.fuji .projects__subtitle,
+.oblivion .projects__subtitle {
+  font-family: 'TTFirsNeue';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  color: #FFFFFF;
+  padding-top: 0;
+  margin: 0;
+  margin-bottom: 5px;
+  padding-right: 20px;
+}
+
+.fuji .projects__subtitle {
+  @include mobile {
+    margin-bottom: 10px;
+  }
+
+  @include small-mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.oblivion .projects__subtitle {
+  @include small-mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.fuji .projects__text,
+.oblivion .projects__text  {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  padding-right: 10px;
+}
+
+.fuji .projects__btn,
+.oblivion .projects__btn {
+  background-color: transparent;
+  border: 3px solid #FF6E30;
+}
+
+.fuji .projects__btn  {
+
+  @include mobile {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include small-mobile {
+    padding: 10px 19px;
+  }
+}
+
+.oblivion .projects__btn  {
+  @include mobile {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include small-mobile {
+    padding: 10px 19px;
+  }
+}
+
+.fuji .projects__text {
+  margin-bottom: 55px;
+}
+
+.oblivion .projects__text{
+  margin-bottom: 100px;
+
+  @include tablet {
+    margin-bottom: 78px;
+  }
+
+  @include mobile {
+    margin-bottom: 95px;
+  }
+
+  @include small-mobile {
+    font-size: 14px;
+    line-height: 18px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.oblivion .tag {
+  padding-left: 4px;
+}
+
+.fuji .projects__article {
+  @include tablet {
+    padding-top: 30px;
+  }
+
+  @include mobile {
+    // padding-right: 40%;
+  }
+
+  @include small-mobile {
+    padding-right: 0;
+    padding-top: 200px;
+  }
+
+}
+
+.fuji .projects__text {
+  margin-bottom: 55px;
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
+  @include small-mobile {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 14px;
+  }
+}
+
+.oblivion {
+  background-image: url('../img/oblivion.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  grid-column: 1/4;
+
+  @include tablet {
+    background-image: url('../img/oblivion1024.jpg');
+    grid-column: 4/9;
+    order: 7;
+  }
+
+  @include mobile {
+    background-image: url('../img/oblivion768.jpg');
+    grid-column: 1/7;
+    background-size: auto auto;
+  }
+
+  @include small-mobile {
+    grid-column: 1;
+    order: 7;
+    background-image: url('../img/oblivion320.jpg');
+    background-size: 100% auto;
+  }
+
+  @include very-small-mobile {
+    background-size: auto;
+  }
+}
+
+.oranges {
+  background-image: url('../img/oranges.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include tablet {
+    background-image: url('../img/oranges1024.jpg');
+    background-size: 100% 60%;
+    order: 5;
+    grid-column: 6/9;
+  }
+
+  @include mobile {
+    background-image: url('../img/oranges768.jpg');
+    grid-column: 1/4;
+    order: 5;
+    background-size: auto auto;
+  }
+
+  @include small-mobile {
+    grid-column: 1;
+    order: 5;
+    background-image: url('../img/oranges320.jpg');
+  }
+}
+
+.portrait2 {
+  background-image: url('../img/portrait2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include tablet {
+    background-image: url('../img/portrait2_1024.jpg');
+    background-size: auto;
+    order: 6;
+    grid-column: 1/4;
+    margin-bottom: 0;
+  }
+
+  @include mobile {
+    background-image: url('../img/portrait2_768.jpg');
+    grid-column: 4/7;
+    background-size: auto auto;
+  }
+
+  @include small-mobile {
+    grid-column: 1;
+    order: 6;
+    background-image: url('../img/portrait2_320.jpg');
+  }
+}
+
+.projects__content-first-row {
+  color: rgba(153, 153, 153, 1);
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 22px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.projects__content {
+  color: rgba(153, 153, 153, 1);
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 22px;
+}
+
+
+.projects__item {
+  position: relative;
+}
